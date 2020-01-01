@@ -1,27 +1,13 @@
 import requests
-import random
 import time
-import datetime
-import bs4
-import selenium
-import webbrowser
+from selenium import webdriver
 import pyautogui 
+import Type 
 
 
-webbrowser.open('https://www.ratatype.com/typing-test/test/')
+tab = webdriver.Chrome()
 
-time.sleep(4)
-pyautogui.press('enter')    
+tab.get('https://www.ratatype.com/typing-test/test/')
 
-res = requests.get('https://www.ratatype.com/typing-test/test/')
-    
-soup = bs4.BeautifulSoup(res.content , 'html5lib')#make tree data structure to traverse and scrap from the html file   
 
-data = soup.select('.mainTxt')[0].getText()
-
-print(data)
-
-pyautogui.typewrite(str(data) , pause=0.5)
-
-pyautogui.press('enter')
-
+Type.startTyping(tab)
