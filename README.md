@@ -4,7 +4,7 @@
 This repository consits of a bot that types on an average of 190 wpm by opening a link https://www.ratatype.com/typing-test/test/
 
 
-->It requires manual login into the account of you to get the required certificate after completion of the script
+It requires manual login into the account of you to get the required certificate after completion of the script
 
 
 Requirements to work with the project :
